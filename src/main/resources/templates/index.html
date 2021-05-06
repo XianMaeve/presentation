@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip_Closet_Landing_Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/mainStyleSheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+
+    <title>LandingPage</title>
+
+
+    <!--    <link th:href="@{/dripclosetstyle.css}" rel="stylesheet">-->
+</head>
+
+<body>
+<div class="navBar">
+    <ul>
+        <a href="/">
+            <img alt="DripCloset Logo" class="logo1" src="../images/drip.png"></a></li>
+        <li sec:authorize="isAuthenticated()"><a href="/logout">Log Out</a></li>
+        <li sec:authorize="isAnonymous()"><a href="/login">Log In</a></li>
+        <li sec:authorize-url="/h2-console"><a href="/h2-console">admin console</a></li>
+        <li><a href="/all-shoes">Shoes</a></li>
+        <li><a href="/all-bottoms">Bottoms</a></li>
+        <li><a href="/all-jackets">Jackets</a></li>
+        <li><a href="/all-tops">Tops</a></li>
+    </ul>
+</div>
+<div id="spacer"></div>
+
+
+<div id="weather">
+
+</div>
+<!--<div id="PageTopper"> </div>-->
+<img src="../images/dripcatalog2.png" alt="logo" class="bigLogo">
+
+<h1 id="Header">Welcome to The Drip Catalog!</h1>
+
+<section id="pageDescription">
+    <h2>Ever wake up & wonder "What am I going to wear today?" Well... The Drip Catalog can answer that question for
+        you.
+        We will provide everyone with a suggested outfit for that day based on the weather in your area.</h2>
+</section>
+
+<div id="zipCode">
+    <input id="zip" type="text" pattern="[0-9]{5}" title="Five digit zip code" placeholder="Zip Code"/>
+    <button id="zipButton" class="startHere"> Click here to get started!</button>
+</div>
+
+<div class="scrollContainer">
+    <div class="twitterdotcom">
+        <a class="twitter-timeline" href="https://twitter.com/CatalogDrip?ref_src=twsrc%5Etfw">Tweets by CatalogDrip</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="follow button">
+            <a href="https://twitter.com/CatalogDrip?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+               data-show-count="false">Follow
+                @CatalogDrip</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+
+        <div class="share button">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+               data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+
+    <div class="socialMedia">
+        <a href="https://www.facebook.com/Drip_Catalog-103357101616972/?view_public_for=103357101616972"
+           target="_blank">
+            <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/drip_catalog/"><i class="fa fa-instagram fa-3x" aria-hidden="true"
+                                                             alt="drip_catalog"></i></a>
+        <h6>Follow us on Instagram and Facebook</h6>
+    </div>
+
+</body>
+
+<footer>
+    <p> &copy WCCI- Drip Closet Project 2020</p>
+</footer>
+<script th:src="@{/js/index.js}"></script>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Jackets</title>
+    <link  rel="stylesheet" type="text/css" media="all"
+           href="../static/css/mainStyleSheet.css">
+    <link th:href="@{/css/mainStyleSheet.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="navBar">
+    <ul>
+        <a href="http://localhost:8080/">
+            <img alt="DripCloset Logo" class="logo1" src="../images/drip.png"></a></li>
+        <li sec:authorize="isAuthenticated()"><a href="/logout">Log Out</a></li>
+        <li sec:authorize="isAnonymous()"><a href="/login">Log In</a></li>
+        <li sec:authorize-url="/h2-console"><a href="/h2-console">admin console</a></li>
+        <li><a href="/all-shoes">Shoes</a></li>
+        <li><a href="/all-bottoms">Bottoms</a></li>
+        <li><a href="/all-jackets">Jackets</a></li>
+        <li><a href="/all-tops">Tops</a></li>
+    </ul>
+</div>
+
+<div id="spacer"></div>
+
+<div class = "errorMessage" th:if="${errorMessage != null}">
+
+    <p th:text="${errorMessage}"></p>
+</div>
+<div class="grid">
+<div th:each="jackets: ${jackets}" class="cards">
+    <h1 th:text="${jackets.jacketType}"></h1>
+
+
+
+    <img th:src="${jackets.jacketImg}" alt="Add Photo" style="width:100%">
+    <span id="delete" class="delete">&times</span>
+    <div class="cardColor">
+
+    <p class="innerText1" th:text="${jackets.color}"></p>
+    <p class="innerText" th:text="${jackets.size}"></p>
+    </div>
+    <form id="submit" class="submit" th:action="'/deleteJacket/' + ${jackets.id}" name="form" method="POST">
+
+    </form>
+</div>
+</div>
+
+<button id="addJacket" sec:authorize="isAuthenticated()">Add Jacket</button>
+<div id="addJacketForm"></div>
+
+
+<script th:src="@{/js/addDeleteClothing.js}"></script>
+</body>
+<footer>
+    <small class="footer__copyright">&copy WCCI- Drip Closet Project 2020</small>
+</footer>
+</html>

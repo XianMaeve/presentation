@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<link rel="stylesheet" type="text/css"  href="../static/css/ShoeViewStyle.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes</title>
+</head>
+
+<body>
+    <div class= "logo1">
+        <img src="../static/Images/Grey-Maeve.png">
+    </div>
+        <br>
+        <br>
+        <br>
+
+        <div id="PageTitleShoe">My Shoes</div>
+
+            <br>
+
+        <div class="dropdownName">
+            <button class="itemnamebutton">Shoe Name</button>
+                <div class="dropdown-name-content">
+                    <a href="#">
+                        <img src= "../static/Images/Black_Heels.jpg" width="30" height="20">Black Heels</a>
+                    <a href="#">
+                        <img src= "../static/Images/DressShoes_Black.jpg"  width="30" height="20">Mens Dress Shoes</a>
+                    <a href="#">
+                        <img src="../static/Images/Loafer_Tan.jpg" width="30" height="20">Tan Loafer</a>
+                    <a href="#">
+                        <img src="../static/Images/Nike_Black.jpg" width="30" height="20">Nike-Black</a>
+                    <a href="#">
+                        <img src="../static/Images/Sneakers_Grey.jpg" width="30" height="20">Grey Sneakers</a>
+                </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+        <div class="dropdownSize">
+             <button class="itemsizebutton">Item Size</button>
+                <div class="dropdown-size-content">
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#">11</a>
+                    <a href="#">12</a>
+                    <a href="#">13</a>
+                    <a href="#">14</a>
+                </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+        <div class="dropdownWeather">
+            <button class="dropweatherbutton">Item Season</button>
+                <div class="dropdown-weather-content">
+                    <a href="#">Spring</a>
+                    <a href="#">Summer</a>
+                    <a href="#">Fall</a>
+                    <a href="#">Winter</a>
+                </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+        <div class="addNewItem" sec:authorize="isAuthenticated">
+            <button class="additembuttonshoe">Enter new Shoe:</button>
+                <div class="addNewShoe">
+                    <Label></Label><input type="text" pattern="[0-9]{5}" name="newItemColorShoe" placeholder="Color"><br/>
+                    <Label></Label><input type="text" pattern="[0-9]{5}" name="newItemStyleShoe" placeholder="Style"><br/>
+                    <Label></Label><input type="text" pattern="[0-9]{5}" name="newItemWeatherTypeShoe" placeholder="Weather Type"><br/>
+                    <input type="file" id="newItemPicBottom" name="newItemPic" accept="image/*">
+                    <br>
+                    <br>
+
+                </div>
+        </div>
+    <button class="additembutton">Submit new Shoes to your
+        <strong><i>Drip </i></strong>closet!
+    </button>
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<link rel="stylesheet" type="text/css" href="/css/mainStyleSheet.css">
+<head>
+    <title>Welcome Back</title>
+</head>
+<body>
+<div id="login-container">
+
+    <div class="navBar">
+        <ul>
+            <a href="http://localhost:8080/">
+                <img alt="DripCloset Logo" class="logo1" src="../images/drip.png"></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/logout">Log Out</a></li>
+            <li sec:authorize="isAnonymous()"><a href="/login">Log In</a></li>
+            <li sec:authorize-url="/h2-console"><a href="/h2-console">admin console</a></li>
+            <li><a href="http://localhost:8080/all-shoes">Shoes</a></li>
+            <li><a href="http://localhost:8080/all-bottoms">Bottoms</a></li>
+            <li><a href="http://localhost:8080/all-jackets">Jackets</a></li>
+            <li><a href="http://localhost:8080/all-tops">Tops</a></li>
+        </ul>
+    </div>
+
+    <img src="../images/dripcatalog2.png" alt="logo" class="bigLogo">
+
+
+    <div class ="register">
+
+        <form action="/addUser/submit" class="itemNameInput" id="register-form">
+
+            <input type="text" name="username" placeholder="username" class="itemNameInput">
+            <input type="text" name="password" placeholder="password" class="itemNameInput">
+            <input type="hidden" name="role" value="USER">
+            <input type="hidden" name="jackets" value=NULL>
+            <input type="hidden" name="shoes" value=NULL>
+            <input type="hidden" name="tops" value=NULL>
+            <input type="hidden" name="bottoms" value=NULL>
+            <input type="hidden" name="accessories" value=NULL>
+            <input type="submit" class="submit">
+
+        </form>
+
+    </div>
+</div>
+<footer>&copy 2020 Elements of Fashion Team </footer>
+</body>
+</html>

@@ -1,0 +1,429 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #454854; !important;
+    margin: 0;
+}
+
+#weather {
+    display: flex;
+    justify-content: center;
+}
+#add{
+    color: greenyellow;
+    margin-top: 25px;
+}
+.displayWeather {
+    margin: 20px;
+    align-self: center;
+    background-color: #001429;
+    padding: 15px;
+    color: white;
+    -webkit-box-shadow: 5px 5px 15px 1px white;
+    box-shadow: 5px 5px 15px 1px white;
+}
+
+.displayWeatherSingle {
+    margin-top: 75px;
+    align-self: center;
+    background-color: #001429;
+    padding: 40px;
+    color: white;
+    -webkit-box-shadow: 5px 5px 15px 1px white;
+    box-shadow: 5px 5px 15px 1px white;
+}
+
+#weather img {
+
+}
+
+.socialMedia {
+    margin-top: 100px;
+}
+
+.bigLogo {
+    height: 80%;
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo1 {
+    top: 0px;
+    width: 465px;
+    height: 55px;
+}
+
+.navBar {
+    background-color: #001429;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+.navBar img {
+    margin-top: 7px;
+    width: auto;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#spacer {
+    margin-bottom: 60px;
+}
+
+li {
+    float: right;
+    display: inline;
+}
+
+ul img {
+    float: left;
+    max-width: 200px;
+    max-height: 80px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+#weatherType{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid {
+    /*display: grid;*/
+    /*grid-template-columns: auto auto;*/
+}
+
+.cardColor {
+    background-color: #001429;
+    width: 400px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+
+}
+
+.cards h1 {
+    margin-top: 50px;
+    color: white;
+    font-size: 22px;
+    background-color: #001429;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.cards img {
+    max-height: 80%;
+    max-width: 80%;
+    /*object-fit: cover;*/
+    /*width: 400px;*/
+    /*height: 500px;*/
+}
+
+.innerText1 {
+    padding-top: 30px;
+    color: white;
+
+}
+
+.innerText {
+    color: white;
+}
+
+#delete:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.footer__copyright {
+    color: #001429;
+}
+
+span {
+    position: absolute;
+    margin-left: -15px;
+}
+
+.deleteOutfit {
+
+    margin-left: 58%;
+    text-align: center;
+
+    display: block;
+
+}
+
+.deleteOutfit:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.
+.errorMessage {
+color: #D8000C;
+background-color: #FFBABA;
+border: 1px solid;
+margin: 10px auto;
+padding: 15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+max-width: 460px;
+}
+
+#addBottoms, #addJacket, #addTops, #addAccessories, #addShoes, #addOutfit{
+display: block;
+margin-left: auto;
+margin-right: auto;
+background-color: #001429;
+color: white;
+height: 100px;
+width: 400px;
+margin-top: 35px;
+}
+
+.formText, .register, #return-home, .log-form, #login {
+display: block;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+background-color: #001429;
+color: white;
+height: 100px;
+width: 400px;
+}
+
+.itemNameInput, .submit, #login, #register-form {
+display: block;
+position: relative;
+margin: 1vh auto;
+margin-top: 1vh;
+}
+
+#Header {
+font-size: 40px;
+color: #E3E4E8;
+text-align: center;
+margin-bottom: 50px;
+
+}
+
+#pageDescription {
+font-size: 20px;
+text-align: center;
+color: #E3E4E8;
+margin-bottom: 50px;
+}
+
+.socialMedia{
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+color: #E3E4E8;
+}
+
+footer{
+position: fixed;
+bottom: 0;
+color: #E3E4E8;
+}
+
+#addBottomsForm, #addTopsForm, #addAccessoriesForm, #addShoesForm, #addJacketForm {
+display: block;
+text-align: center;
+
+
+}
+.createOutfit input[type=text] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.createOutfit input[type=submit] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #001429;
+    color: white;
+    height: 100px;
+    width: 400px;
+    margin-top: 35px;
+}
+
+
+.createOutfit h1 {
+    color: white;
+    text-align: center;
+}
+.addNewBottoms, .addNewTops, .addNewAccessories, .addNewShoes, .addNewJacket ,.addOutfit{
+margin-top: 35px;
+color: white;
+font-size: 24px;
+display: inline-block;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+background-size: 500px;
+background-color: #001429;
+    padding: 15px;
+
+}
+#zipCode{
+display: none;
+justify-content: center;
+margin-bottom: 25px;
+}
+
+#enterZip{
+color: #E3E4E8;
+text-align: center;
+margin-bottom: 25px;
+
+
+}
+
+#zipButton {
+margin-left: 20px;
+background-color: #001429;
+outline-color: white;
+outline-style: solid;
+color: white;
+
+}
+#zip {
+outline-style: solid;
+outline-color: white;
+
+}
+
+#outfitDisplay{
+width: 100%
+}
+
+/*iframe {*/
+/*    display: block;*/
+/*    width: 25%;*/
+/*    margin-right: auto;*/
+/*    margin-left: auto;*/
+/*}*/
+/*.scrollContainer{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    display: flex;*/
+/*    height: 300px;*/
+/*    max-height: 300px;*/
+/*}*/
+
+.twitterdotcom {
+ width:400px;
+
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+    /*overflow: scroll;*/
+    /*overflow-x: hidden;*/
+
+
+iframe {
+
+   position: relative;
+    height:100%;
+    width:100%;
+}
+
+input[type="radio"]{
+    position: absolute;
+    margin-top:90%;
+}
+
+.itemNameInput {
+    text-align: center;
+}
+
+/*.twitterdotcom::-webkit-scrollbar-track{*/
+/*    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+/*    background-color: #F5F5F5;*/
+/*}*/
+/*.twitterdotcom::-webkit-scrollbar*/
+/*{*/
+/*    margin-left: 10px;*/
+/*    height: 30px;*/
+/*    width: 6px;*/
+/*    background-color: #001429;*/
+/*}*/
+
+/*.twitterdotcom::-webkit-scrollbar-thumb*/
+/*{*/
+/*    background-clip: padding-box;*/
+/*    background-color: #001429;*/
+
+/*}*/
+

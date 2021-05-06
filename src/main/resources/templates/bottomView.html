@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<link rel="stylesheet" type="text/css"  href="../static/css/BottomViewStyle.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bottoms</title>
+</head>
+
+<body>
+    <div class= "logo1">
+        <img src="../static/Images/Grey-Maeve.png">
+    </div>
+        <br>
+        <br>
+        <br>
+
+        <div id="PageTitleB">My Bottoms</div>
+
+            <br>
+
+        <div class="dropdownName">
+            <button class="itemnamebutton">Item Name</button>
+                <div class="dropdown-name-content">
+                    <a href="#">
+                        <img src= "../static/Images/HammerPants.jpg"  width="30" height="20">Hammer Pants</a>
+                    <a href="#">
+                        <img src= "../static/Images/BlueSkirt.jpg"  width="30" height="20"> Blue Skirt</a>
+                    <a href="#">
+                        <img src="../static/Images/BlueJeans.jpg" width="30" height="20">Blue Jeans</a>
+                    <a href="#">
+                        <img src="../static/Images/LtBrownDressPAnts.JPG" width="30" height="20">Dress Pants-Brown</a>
+                    <a href="#">
+                        <img src="../static/Images/RedMaxiSkirt.jpg" width="30" height="20">Red Maxi Skirt</a>
+                </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+        <div class="dropdownSize">
+            <button class="itemsizebutton">Item Size</button>
+                <div class="dropdown-size-content">
+                    <a href="#">X-Small</a>
+                    <a href="#">Small</a>
+                    <a href="#">Medium</a>
+                    <a href="#">Large</a>
+                    <a href="#">X-Large</a>
+                    <a href="#">1X</a>
+                    <a href="#">2X</a>
+                    <a href="#">3X</a>
+                    <a href="#">4X</a>
+                </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="dropdownWeather">
+                <button class="dropweatherbutton">Item Season</button>
+                    <div class="dropdown-weather-content">
+                        <a href="#">Spring</a>
+                        <a href="#">Summer</a>
+                        <a href="#">Fall</a>
+                        <a href="#">Winter</a>
+                    </div>
+            </div>
+
+                <br>
+                <br>
+                <br>
+
+            <div class="addNewItem">
+                <button class="additembuttonbottom" sec:authorize="isAuthenticated">Enter new Bottom:</button>
+                    <div class="addNewBottom">
+                        <Label></Label><input type="text" pattern="[0-9]{5}" name="newItemColorBottom" placeholder="Color"><br/>
+                        <Label></Label><input type="text" pattern="[0-9]{5}" name="newItemStyleBottom" placeholder="Style"><br/>
+                        <Label></Label><input type="text" pattern="[0-9]{5}" name="newItemWeatherTypeBottom" placeholder="Weather Type"><br/>
+                        <input type="file" id="newItemPicBottom" name="newItemPic" accept="image/*">
+                        <br>
+                        <br>
+
+                    </div>
+            </div>
+    <button class="additembuttonbottom">Submit new Bottom to your
+        <strong><i>Drip </i></strong>closet!
+    </button>
+
+    </body>
+</html>

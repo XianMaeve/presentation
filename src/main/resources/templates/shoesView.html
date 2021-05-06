@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes</title>
+    <link  rel="stylesheet" type="text/css" media="all"
+           href="../static/css/mainStyleSheet.css">
+    <link th:href="@{/css/mainStyleSheet.css}" rel="stylesheet">
+</head>
+
+<body>
+<div class="navBar">
+    <ul>
+        <a href="http://localhost:8080/">
+            <img alt="DripCloset Logo" class="logo1" th:src= "@{/Images/drip.png}"></a></li>
+        <li sec:authorize="isAuthenticated()"><a href="/logout">Log Out</a></li>
+        <li sec:authorize="isAnonymous()"><a href="/login">Log In</a></li>
+        <li sec:authorize-url="/h2-console"><a href="/h2-console">admin console</a></li>
+        <li><a href="http://localhost:8080/all-shoes">Shoes</a></li>
+        <li><a href="http://localhost:8080/all-bottoms">Bottoms</a></li>
+        <li><a href="http://localhost:8080/all-jackets">Jackets</a></li>
+        <li><a href="http://localhost:8080/all-tops">Tops</a></li>
+        <li><a href="http://localhost:8080/outfit">Outfits</a></li>
+    </ul>
+</div>
+<div id="spacer"></div>
+<div class = "errorMessage" th:if="${errorMessage != null}">
+
+    <p th:text="${errorMessage}"></p>
+</div>
+
+<!--<h1>Your Shoes</h1>-->
+
+<div th:each="shoes: ${shoes}" class="cards">
+    <h1 th:text="${shoes.shoeMake}"></h1>
+
+    <img th:src="${shoes.shoeImg}" alt="Add Photo" style="width:100%">
+    <span id="delete" class="delete">&times</span>
+    <div class="cardColor">
+    <p class="innerText1" th:text="${shoes.shoeModel}"></p>
+    <p class="innerText" th:text="${shoes.color}"></p>
+    <p class="innerText" th:text="${shoes.size}"></p>
+    </div>
+
+    <form class="submit" id="submit" th:action="'/deleteShoes/' + ${shoes.id}" method="POST">
+
+    </form>
+</div>
+
+<button id="addShoes" sec:authorize="isAuthenticated()">Add Shoes</button>
+
+<div id="addShoesForm"></div>
+
+
+
+
+<script th:src="@{/js/addDeleteClothing.js}"></script>
+</body>
+<footer>
+    <small class="footer__copyright">&copy WCCI- Drip Closet Project 2020</small>
+</footer>
+</html>

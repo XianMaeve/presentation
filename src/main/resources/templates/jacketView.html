@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css"  href="../static/css/JacketViewStyle.css" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Jackets</title>
+</head>
+
+<body>
+    <div class= "logo1">
+        <img src="../static/Images/Grey-Maeve.png">
+    </div>
+        <br>
+        <br>
+        <br>
+
+        <div id="PageTitle">My Jackets</div>
+
+            <br>
+
+        <div class="dropdownName">
+            <button class="itemnamebutton">Item Name</button>
+                <div class="dropdown-name-content">
+                    <a href="#">
+                        <img src= "Images"  width="30" height="20">Winter Coat</a>
+                    <a href="#">
+                        <img src= "Images"  width="30" height="20">Rain Jacket</a>
+                    <a href="#">
+                        <img src="Images" width="30" height="20">Windbreaker</a>
+                    <a href="#">
+                        <img src="Images" width="30" height="20">Hoodie</a>
+                    <a href="#">
+                        <img src="Images" width="30" height="20">Leather Jacket</a>
+                </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+        <div class="dropdownSize">
+            <button class="itemsizebutton">Item Size</button>
+                <div class="dropdown-size-content">
+                    <a href="#">X-Small</a>
+                    <a href="#">Small</a>
+                    <a href="#">Medium</a>
+                    <a href="#">Large</a>
+                    <a href="#">X-Large</a>
+                    <a href="#">1X</a>
+                    <a href="#">2X</a>
+                    <a href="#">3X</a>
+                    <a href="#">4X</a>
+                </div>
+        </div>
+            <br>
+            <br>
+            <br>
+
+        <div class="dropdownWeather">
+            <button class="dropweatherbutton">Item Season</button>
+                <div class="dropdown-weather-content">
+                    <a href="#">Spring</a>
+                    <a href="#">Summer</a>
+                    <a href="#">Fall</a>
+                    <a href="#">Winter</a>
+                </div>
+        </div>
+            <br>
+            <br>
+            <br>
+
+        <div class="addNewItem">
+            <button class="additembuttonjacket">Enter a new Jacket:</button>
+                <div class="addNewTop">
+                    <Label></Label><input type="text" pattern="[0-9]{5}" title="newItemColor" placeholder="Color"/>
+                    <Label></Label><input type="text" pattern="[0-9]{5}" title="newItemStyle" placeholder="Style"/>
+                    <Label></Label><input type="text" pattern="[0-9]{5}" title="newItemWeatherType" placeholder="Weather Type"/>
+                    <input type="file" id="newItemPic" name="newItemPic">
+                    <input type="submit">
+
+                </div>
+        </div>
+    <button class="additembuttonbottom" sec:authorize="isAuthenticated">Submit new Jacket to your
+        <strong><i>Drip </i></strong>closet!
+    </button>
+
+    </body>
+</html>
+
+
+
+
+<!--<h2 th:text="${jacket.jacketType}"></h2>-->
+<!--<img th:src="${jacket.jacketImg}">-->
+<!--<ul>-->
+<!--    <li th:text="Color':' ${jacket.color}"></li>-->
+<!--    <li th:text="Size':' ${jacket.size}"></li>-->
+<!--    <li th:text="Weather':' ${jacket.jacketWeather}"></li>-->
+<!--</ul>-->
